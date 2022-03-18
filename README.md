@@ -1,10 +1,9 @@
 # pylint-deprecated-decorator
-A pylint checker to detect and warn @deprecated decorators on classes and functions
+A pylint checker to detect and @deprecated decorators on classes and functions.
+Warns when classes and functions are being called that are decorated with @deprecated. 
+Intended to be used in conjunction with a library like https://pypi.org/project/deprecation/.
 
-A pylint checker to detect and warn when classes and functions are being called that are decorated with @deprecated. Intended to be used in conjection with a library like https://pypi.org/project/deprecation/.
-
-Given some code like
-
+Given some python code like
 ```
 from deprecation import deprecated
 
@@ -12,6 +11,8 @@ from deprecation import deprecated
 @deprecated(details="Replaced by new_function")
 def old_function() -> None:
     pass
+    
+old_function()
 ```
 
 We can get a pylint warning like
