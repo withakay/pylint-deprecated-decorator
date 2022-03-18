@@ -1,6 +1,6 @@
 - id: pylint-deprecated-decorator
   name: pylint-deprecated-decorator
-  entry: env PYTHONPATH="$PYTHONPATH:$PWD/pylint-deprecated-decorator" pylint --load-plugins=deprecated_checker --disable=all --enable=no-deprecated-decorator
+  entry: env PYTHONPATH="$PYTHONPATH:$PWD/pylint-deprecated-decorator" pylint --load-plugins=deprecated_decorator --disable=all --enable=no-deprecated-decorator
   language: python
   types: [python]
   require_serial: true
