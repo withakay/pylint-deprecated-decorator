@@ -15,7 +15,7 @@ and the check is called 'deprecated-decorator'
 """
 
 
-from pylint_deprecated_decorator.deprecated_decorator import __version__
+from deprecated_decorator import __version__
 from mocked_deprecated_decorator import deprecated
 
 
