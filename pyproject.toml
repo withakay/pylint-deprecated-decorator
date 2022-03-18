@@ -1,8 +1,12 @@
 [tool.poetry]
 name = "pylint-deprecated-decorator"
-version = "0.1.0"
+version = "0.2.0"
 description = "A pylint checker to detect @deprecated decorators on classes and functions"
 authors = ["withakay <jack@fader.co.uk>"]
+
+packages = [
+    { include = "deprecated_decorator" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
