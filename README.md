@@ -31,3 +31,26 @@ To run the check we need to tell pylint to load the plugin and if you have --dis
 `pylint --load-plugins=deprecated_decorator --disable=all --enable=no-deprecated-decorator some_module.py`
 
 This can also be configured in the `.pylintrc`. Consult the pylint documentation for more information.
+
+### Via pre-commit
+
+This plugin can be installed via [pre-commit](https://pre-commit.com/) as follows:
+```yaml
+  - repo: https://github.com/PyCQA/pylint
+    rev: v2.12.1
+    hooks:
+      - types: [ python ]
+        id: pylint
+        entry: pylint --load-plugins=deprecated_decorator --disable=all --enable=no-deprecated-decorator
+        additional_dependencies: 
+          - pylint-deprecated-decorator
+```
+
+Instead of modifying the `entry` as above, the plugin can also be configured in your `.pylintrc` file. 
+
+```ini
+[MASTER]
+load-plugins=deprecated_decorator
+disable=all
+enable=logging-not-lazy,logging-format-interpolation,logging-fstring-interpolation,no-deprecated-decorator
+```

@@ -3,7 +3,7 @@ from pylint.checkers import BaseChecker
 from pylint.interfaces import IAstroidChecker
 
 
-__version__ = '0.2.1'
+__version__ = '0.2.2'
 __author__ = 'Jack Rutherford (@withakay)'
 
 
