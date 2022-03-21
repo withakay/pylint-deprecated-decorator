@@ -37,7 +37,7 @@ This can also be configured in the `.pylintrc`. Consult the pylint documentation
 This plugin can be installed via [pre-commit](https://pre-commit.com/) as follows:
 ```yaml
   - repo: https://github.com/PyCQA/pylint
-    rev: v2.12.1
+    rev: v2.12.2
     hooks:
       - types: [ python ]
         id: pylint
