@@ -20,7 +20,7 @@ from mocked_deprecated_decorator import deprecated
 
 
 def test_version():
-    assert __version__ == '0.2.3'
+    assert __version__ == '0.2.4'
 
 
 @deprecated
